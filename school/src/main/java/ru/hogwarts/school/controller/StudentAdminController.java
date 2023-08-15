@@ -4,8 +4,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.hogwarts.school.model.Student;
 import ru.hogwarts.school.service.StudentService;
 
-import java.util.Collection;
-
 @RestController
 @RequestMapping("student")
 public class StudentAdminController {

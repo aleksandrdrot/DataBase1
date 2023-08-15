@@ -51,8 +51,9 @@ public class StudentService {
 
     public List<String> studentSortedC(){
         return studentRepository.findAll().stream()
-                .filter(s -> s.getName().startsWith("С"))
-                .map(student -> student.getName())
+                .map(Student::getName)
+                .filter(s -> s.startsWith("С"))
+                .map(String::toUpperCase)
                 .sorted()
                 .collect(Collectors.toList());
     }
