@@ -21,4 +21,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query(value = "select id, name from student order by id desc LIMIT 5", nativeQuery = true)
     List<countStudent> idSortStudent();
 
+    @Query(value = "select name from student", nativeQuery = true)
+    List<String> studentName();
+
 }

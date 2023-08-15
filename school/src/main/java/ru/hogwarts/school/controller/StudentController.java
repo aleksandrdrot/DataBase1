@@ -63,4 +63,14 @@ public class StudentController {
         return studentService.studentAverageArg();
     }
 
+    @GetMapping("student-name")
+    public void studentName(){
+        studentService.studentName();
+    }
+
+    @GetMapping("student-name-print")
+    public void studentNamePrint(){
+        studentService.studentNamePrint();
+    }
+
 }
